@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void Sum(int , int , int*);
+
+int main(){
+
+    int x;
+    int y;
+
+    printf("Value of x: ");
+    scanf("%d", &x);
+    printf("Value of y: ");
+    scanf("%d", &y);
+
+    int sum;
+    int* pSum = &sum;
+
+    Sum(x, y, pSum);
+
+    printf("Sum = %d", *pSum);
+
+}
+
+void Sum(int x, int y, int* sum){
+
+    *sum = x + y;
+
+}
